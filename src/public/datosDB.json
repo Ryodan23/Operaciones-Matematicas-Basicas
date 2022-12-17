@@ -1,0 +1,31 @@
+[
+    {
+        "_id": "63915fad33c29b3a69eb8516",
+        "operacion": "Suma",
+        "valores": "2 + 2 = 4"
+    },
+    {
+        "_id": "63921adb4f8c186a9fdfbeba",
+        "operacion": "Resta",
+        "valores": "4 - 2 = 2",
+        "__v": 0
+    },
+    {
+        "_id": "6392231e593f8138da85b4a2",
+        "operacion": "Division",
+        "valores": "4 / 2 = 2",
+        "__v": 0
+    },
+    {
+        "_id": "63928f0e5015b157d9202c7c",
+        "operacion": "Suma",
+        "valores": "5 + 5 = 10",
+        "__v": 0
+    },
+    {
+        "_id": "63928f2f862efa559d03a61a",
+        "operacion": "Resta",
+        "valores": "4 - 2 = 2",
+        "__v": 0
+    }
+]

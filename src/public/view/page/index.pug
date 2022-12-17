@@ -1,0 +1,123 @@
+extends ../layout/layout 
+
+block contenido 
+
+    div(style="height: 110px; text-align: center;", class="mt-4 p-4 text-black rounded")
+        h2 Proyecto 5
+        p Node.js
+
+    br
+    div(style="height: 530px; text-align: center;", class="mt-3 p-3 bg-secondary text-dark rounded")
+        h1(class="text-white") Calculadora Web
+        br
+
+        div(class="row")
+            div(class="col-sm-3")
+                div(class="card", style="width:350px")
+                    div(class="card-header") 
+                        h4 Suma
+
+                    div(class="card-body") 
+                        form(method="POST")
+                            div(class="mb-3")
+                                input(type="hidden" name="Operacion" id="Operacion" value="Suma")
+                                label(for="number1Sum" class="form-label") Número 1
+                                input(type="number" class="form-control" id="number1Sum" placeholder="Ingrese un número" name="number1" required)
+
+                            div(class="mb-3")
+                                label(for="number2Sum" class="form-label") Número 2
+                                input(type="number" class="form-control" id="number2Sum" placeholder="Ingrese un número" name="number2" required)
+                                input(type="hidden" name="total" id="TotalS")
+
+                            button(type="submit" id="btnSumar" class="btn btn-danger") Sumar
+
+                    div(class="card-footer")
+                        div(class="mb-3")
+                            label(for="ResultSum" class="form-label") Resultado
+                            input(type="number" class="form-control" id="ResultSum" placeholder="Total" disabled="disabled" name="ResultSum")
+
+            div(class="col-sm-3")
+                div(class="card", style="width:350px")
+                    div(class="card-header") 
+                        h4 Resta
+
+                    div(class="card-body") 
+                        form(method="POST")
+                            div(class="mb-3")
+                                input(type="hidden" name="Operacion" id="Operacion" value="Resta")
+                                label(for="number1Res" class="form-label") Número 1
+                                input(type="number" class="form-control" id="number1Res" placeholder="Ingrese un número" name="number1" required)
+
+                            div(class="mb-3")
+                                label(for="number2Res" class="form-label") Número 2
+                                input(type="number" class="form-control" id="number2Res" placeholder="Ingrese un número" name="number2" required)
+                                input(type="hidden" name="total" id="TotalR")
+
+                            button(type="submit" id="btnRestar" class="btn btn-danger") Restar
+
+                    div(class="card-footer") 
+                        div(class="mb-3")
+                            label(for="ResultRes" class="form-label") Resultado
+                            input(type="number" class="form-control" id="ResultRes" placeholder="Total" disabled="disabled" name="ResultRes")
+
+            div(class="col-sm-3")
+                div(class="card", style="width:350px")
+                    div(class="card-header") 
+                        h4 Multiplicación
+
+                    div(class="card-body") 
+                        form(method="POST")
+                            div(class="mb-3")
+                                input(type="hidden" name="Operacion" id="Operacion" value="Multiplicacion")
+                                label(for="number1Mul" class="form-label") Número 1
+                                input(type="number" class="form-control" id="number1Mul" placeholder="Ingrese un número" name="number1" required)
+
+                            div(class="mb-3")
+                                label(for="number2Mul" class="form-label") Número 2
+                                input(type="number" class="form-control" id="number2Mul" placeholder="Ingrese un número" name="number2" required)
+                                input(type="hidden" name="total" id="TotalM")
+
+                            button(type="submit" id="btnMultiplicar" class="btn btn-danger") Multiplicar
+
+                    div(class="card-footer") 
+                        div(class="mb-3")
+                            label(for="ResultMul" class="form-label") Resultado
+                            input(type="number" class="form-control" id="ResultMul" placeholder="Total" disabled="disabled" name="ResultMul")
+
+            div(class="col-sm-3")
+                div(class="card", style="width:350px")
+                    div(class="card-header") 
+                        h4 División
+
+                    div(class="card-body")
+                        form(method="POST")
+                            div(class="mb-3")
+                                input(type="hidden" name="Operacion" id="Operacion" value="Division")
+                                label(for="number1Div" class="form-label") Número 1
+                                input(type="number" class="form-control" id="number1Div" placeholder="Ingrese un número" name="number1" required)
+
+                            div(class="mb-3")
+                                label(for="number2Div" class="form-label") Número 2
+                                input(type="number" class="form-control" id="number2Div" placeholder="Ingrese un número" name="number2" required)
+                                input(type="hidden" name="total" id="TotalD")
+
+
+                            button(type="submit" id="btnDividir" class="btn btn-danger") Dividir
+
+                    div(class="card-footer") 
+                        div(class="mb-3")
+                            label(for="ResultDiv" class="form-label") Resultado
+                            input(type="number" class="form-control" id="ResultDiv" placeholder="Total" disabled="disabled" name="ResultDiv")
+
+block tabla
+    div(style="height: 280px; text-align: center;" class="container mt-3 text-dark rounded")
+        h2 Historial de operaciones    
+        br       
+        table(class="table table-bordered")
+            thead
+                tr
+                    th ID
+                    th Operación
+                    th Valores
+
+            tbody(id="TablaOperaciones")
